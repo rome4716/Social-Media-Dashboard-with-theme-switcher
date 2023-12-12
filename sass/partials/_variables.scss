@@ -26,7 +26,7 @@ $very-dark-blue-pattern: hsl(232, 19%, 15%); // Top BG Pattern
 $dark-desaturated-blue: hsl(229, 27%, 20%); // Card BG
 $desaturated-blue: hsl(228, 34%, 66%); // Text
 $white: hsl(0, 0%, 100%); // Text
-
+$dark-card-hover: hsl(229, 27%, 27%);
 // Light Theme
 
 $white: hsl(0, 0%, 100%); // BG
@@ -34,6 +34,7 @@ $very-pale-blue: hsl(225, 100%, 98%); // Top BG Pattern
 $light-grayish-blue: hsl(227, 47%, 96%); // Card BG
 $dark-grayish-blue: hsl(228, 12%, 44%); // Text
 $very-dark-blue: hsl(230, 17%, 14%); // Text
+$light-card-hover: hsl(255, 40%, 92%);
 
 // @media (prefers-color-scheme: dark) {
 //   $toggle-light: $toggle-dark !global;

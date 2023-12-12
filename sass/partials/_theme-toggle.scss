@@ -7,6 +7,10 @@
     background-color: $light-grayish-blue;
   }
 
+  .card:hover {
+    background-color: $light-card-hover;
+  }
+
   .text {
     color: $very-dark-blue;
   }
@@ -29,11 +33,17 @@
   body {
     background-color: $very-dark-blue-bg;
   }
+
   body::before {
     background-color: $very-dark-blue-pattern;
   }
+
   .card {
     background-color: $dark-desaturated-blue;
+  }
+
+  .card:hover {
+    background-color: $dark-card-hover;
   }
 
   .text {

@@ -35,6 +35,7 @@ body::before {
 
 .card {
   border-radius: 5px;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -573,6 +574,9 @@ body::before {
 .light-mode .card {
   background-color: hsl(227, 47%, 96%);
 }
+.light-mode .card:hover {
+  background-color: hsl(255, 40%, 92%);
+}
 .light-mode .text {
   color: hsl(230, 17%, 14%);
 }
@@ -595,6 +599,9 @@ body::before {
 }
 .dark-mode .card {
   background-color: hsl(229, 27%, 20%);
+}
+.dark-mode .card:hover {
+  background-color: hsl(229, 27%, 27%);
 }
 .dark-mode .text {
   color: hsl(0, 0%, 100%);
