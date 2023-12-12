@@ -1,0 +1,144 @@
+.main__container-followers {
+  display: grid;
+  margin-top: $base-spacing * 1.75;
+  grid-template-columns: minmax(20.25rem, 1fr);
+  gap: 1.5rem;
+  place-content: center;
+
+  @include sm {
+    gap: 1.75rem;
+  }
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xl {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  @include xxl {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  .social-card {
+    display: flex;
+    width: 100%;
+    padding-top: $base-spacing * 2.5;
+    padding-bottom: $base-spacing * 2;
+    // background-color: $light-grayish-blue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+
+    @include sm {
+      padding-top: $base-spacing * 2.75;
+    }
+
+    @include md {
+      padding-top: $base-spacing * 3;
+    }
+
+    @include lg {
+      padding-top: $base-spacing * 3.25;
+    }
+
+    @include xxl {
+      padding-top: $base-spacing * 3.5;
+      padding-bottom: $base-spacing * 2.5;
+    }
+
+    .card-heading-wrap {
+      display: flex;
+      // color: $dark-grayish-blue;
+      align-items: center;
+      gap: 0.5rem;
+
+      .card-heading {
+        font-size: $base-font-size * 0.75;
+
+        @include sm {
+          font-size: $base-font-size * 0.775;
+        }
+
+        @include md {
+          font-size: $base-font-size;
+        }
+
+        @include xxl {
+          font-size: $base-font-size;
+        }
+      }
+    }
+
+    .engagement-wrap {
+      margin-top: $base-spacing * 1.75;
+
+      @include sm {
+        margin-top: $base-spacing * 2;
+      }
+
+      @include md {
+        margin-top: $base-spacing * 2.25;
+      }
+
+      @include xxl {
+        margin-top: $base-spacing * 2.5;
+      }
+
+      .engagement-count {
+        font-size: $base-font-size * 3.75;
+        // color: $very-dark-blue;
+
+        @include sm {
+          font-size: $base-font-size * 4;
+        }
+
+        @include md {
+          font-size: $base-font-size * 4.25;
+        }
+
+        @include xxl {
+          font-size: $base-font-size * 4.5;
+        }
+      }
+
+      .engagement-text {
+        // color: $dark-grayish-blue;
+        font-size: $base-font-size * 0.75;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+
+        @include sm {
+          margin-top: $base-spacing * 0.25;
+          font-size: $base-font-size * 0.875;
+        }
+
+        @include md {
+          margin-top: $base-spacing * 0.25;
+        }
+
+        @include xxl {
+          margin-top: $base-spacing * 0.5;
+          font-size: $base-font-size;
+        }
+      }
+    }
+  }
+
+  .social-card.fb {
+    @include top-border($facebook);
+  }
+  .social-card.twitter {
+    @include top-border($twitter);
+  }
+  .social-card.ig {
+    @include top-border($instagram);
+  }
+  .social-card.yt {
+    @include top-border($youTube);
+  }
+}

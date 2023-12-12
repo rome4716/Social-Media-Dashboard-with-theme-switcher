@@ -1,0 +1,17 @@
+// variables, mixin, breakpoints, animation
+@import "partials/variables";
+@import "partials/breakpoints";
+@import "partials/mixin";
+
+// base, layouts & components
+@import "base";
+@import "components/header";
+@import "components/followers";
+@import "components/overview";
+
+// utils (spacing, visibility, aligning)
+@import "partials/utilities";
+
+// theme
+// @import "partials/dark-mode";
+@import "partials/theme-toggle";

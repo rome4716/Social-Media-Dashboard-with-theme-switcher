@@ -1,0 +1,49 @@
+@mixin top-border($color) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+    background: $color;
+    border-radius: 100vw 100vw 0 0;
+    z-index: 1;
+  }
+}
+
+@mixin grid-container {
+  display: grid;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xl {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  @include xxl {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+// colors light mode
+
+// // Dark mode
+// @mixin dark-mode {
+//   $toggle-light: $toggle-dark !global;
+//   $white: $very-dark-blue-bg !global;
+//   $very-pale-blue: $very-dark-blue-pattern !global;
+//   $light-grayish-blue: $dark-desaturated-blue !global;
+//   $dark-grayish-blue: $desaturated-blue !global;
+//   $very-dark-blue: hsl(0, 0%, 100%) !global;
+// }
+// @media (prefers-color-scheme: dark) {
+
+// }

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Inter:wght@400;700&family=Montserrat&family=Open+Sans:wght@400;500;600;700&family=Roboto&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  transition: color 800ms ease-in-out, background-color 800ms ease-in-out;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $white;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-height: 235px;
+  // background-color: $very-dark-blue-pattern;
+  transition: background-color 800ms ease-in-out;
+  z-index: -1;
+
+  @include md {
+    max-height: 255px;
+  }
+
+  @include lg {
+    max-height: 275px;
+  }
+
+  @include xxl {
+    max-height: 295px;
+  }
+}
+
+.card {
+  border-radius: 5px;
+}
+
+.social-icon {
+  @include sm {
+    width: 22px;
+  }
+
+  @include md {
+    width: 24px;
+  }
+
+  @include xxl {
+    width: 28px;
+  }
+}
+
+.arrow {
+  @include md {
+    width: 10px;
+  }
+}
+
+.colored-text-wrap {
+  display: flex;
+  margin-top: $base-spacing * 2;
+  align-items: center;
+
+  @include sm {
+    margin-top: $base-spacing * 2.25;
+  }
+
+  @include md {
+    margin-top: $base-spacing * 2.5;
+  }
+
+  @include xxl {
+    margin-top: $base-spacing * 3;
+  }
+
+  .colored-text {
+    color: $lime-green;
+    font-size: $base-font-size * 0.75;
+
+    @include md {
+      font-size: $base-font-size;
+    }
+  }
+
+  .colored-text.red {
+    color: $bright-red;
+  }
+}

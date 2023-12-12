@@ -1,0 +1,55 @@
+.light-mode {
+  body::before {
+    background-color: $very-pale-blue;
+  }
+
+  .card {
+    background-color: $light-grayish-blue;
+  }
+
+  .text {
+    color: $very-dark-blue;
+  }
+
+  .text-secondary {
+    color: $dark-grayish-blue;
+  }
+
+  .theme-toggle-btn {
+    background-color: $toggle-light;
+
+    .circle {
+      background-color: $white;
+      left: 75% !important;
+    }
+  }
+}
+
+.dark-mode {
+  body {
+    background-color: $very-dark-blue-bg;
+  }
+  body::before {
+    background-color: $very-dark-blue-pattern;
+  }
+  .card {
+    background-color: $dark-desaturated-blue;
+  }
+
+  .text {
+    color: $white;
+  }
+
+  .text-secondary {
+    color: $desaturated-blue;
+  }
+
+  .theme-toggle-btn {
+    background-color: transparent;
+    background-image: $toggle-dark;
+
+    .circle {
+      background-color: $very-dark-blue;
+    }
+  }
+}

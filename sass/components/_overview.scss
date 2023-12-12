@@ -1,0 +1,103 @@
+.overview-container {
+  padding-block: $base-spacing * 2.75 $base-spacing * 3.5;
+  margin-top: $base-spacing;
+
+  @include md {
+    padding-block: $base-spacing * 3 $base-spacing * 3.75;
+    margin-top: $base-spacing;
+  }
+
+  @include xxl {
+    padding-block: $base-spacing * 3.5 $base-spacing * 4;
+    margin-top: $base-spacing;
+  }
+
+  .overview__header {
+    margin-bottom: $base-spacing * 2;
+
+    @include xxl {
+      margin-bottom: $base-spacing * 2.25;
+    }
+
+    .overview__header-h2 {
+      font-size: $base-font-size * 1.5;
+      // color: $dark-grayish-blue;
+    }
+  }
+
+  .main__container-overview {
+    display: grid;
+    gap: 1rem;
+
+    @include sm {
+      gap: 1.75rem;
+    }
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include xl {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @include xxl {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+
+    .overview__stat-card {
+      display: flex;
+      flex-direction: column;
+      padding-block: $base-spacing * 2.25 $base-spacing * 1.75;
+      padding-inline: $base-spacing * 2 $base-spacing * 2.575;
+      // background-color: $light-grayish-blue;
+      justify-content: space-between;
+      gap: $base-spacing * 2.25;
+
+      @include xxl {
+        padding-block: $base-spacing * 2.5 $base-spacing * 2.25;
+        padding-inline: $base-spacing * 2.5 $base-spacing * 3;
+        gap: $base-spacing * 0.75;
+      }
+
+      .card-heading-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .card-heading {
+          font-size: $base-overview-fs;
+          // color: $dark-grayish-blue;
+
+          @include xxl {
+            font-size: $base-overview-fs * 1.215;
+          }
+        }
+
+        .social-icon {
+          @include xxl {
+            width: 25px;
+          }
+        }
+      }
+
+      .engagement-metric-wrap {
+        display: flex;
+        font-size: $base-overview-fs * 0.85;
+        justify-content: space-between;
+        align-items: end;
+
+        .engagement-count {
+          font-size: $base-overview-fs * 2.25;
+          // color: $very-dark-blue;
+          line-height: 0.85;
+
+          @include xxl {
+            font-size: $base-overview-fs * 2.75;
+          }
+        }
+      }
+    }
+  }
+}

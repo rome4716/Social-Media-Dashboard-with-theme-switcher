@@ -1,0 +1,124 @@
+.header {
+  padding-top: $base-spacing * 3;
+  padding-bottom: $base-spacing * 1.5;
+
+  .header__h1 {
+    font-size: $base-font-size * 1.5;
+    // color: $very-dark-blue;
+
+    @include sm {
+      font-size: $base-font-size * 1.75;
+    }
+
+    @include lg {
+      font-size: $base-font-size * 2;
+    }
+
+    @include xxl {
+      font-size: $base-font-size * 2.125;
+    }
+  }
+
+  .header__h2-wrap {
+    margin-top: $base-spacing * 0.5;
+
+    @include xxl {
+      margin-top: $base-spacing * 0.25;
+    }
+
+    @include md {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header__h2 {
+      font-size: $base-font-size * 0.875;
+      // color: $dark-grayish-blue;
+
+      @include md {
+        display: flex;
+        font-size: $base-font-size;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include xxl {
+        font-size: $base-font-size * 1.075;
+      }
+    }
+
+    .header__h-line {
+      margin-top: $base-spacing * 2;
+      margin-bottom: $base-spacing * 1.25;
+
+      @include md {
+        display: none;
+      }
+    }
+
+    .theme-btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $base-font-size;
+      // color: $dark-grayish-blue;
+
+      .theme-btn-label {
+        font-size: $base-font-size;
+
+        @include xxl {
+          font-size: $base-font-size * 1.075;
+        }
+      }
+
+      .theme-toggle-btn {
+        position: relative;
+        width: 50px;
+        height: 25px;
+        // background: $toggle-light;
+        border: none;
+        border-radius: 100vw;
+        cursor: pointer;
+
+        @include md {
+          width: 53px;
+          height: 28px;
+          margin-left: $base-spacing;
+        }
+
+        @include xxl {
+          width: 58px;
+          height: 30px;
+        }
+      }
+
+      .circle {
+        // background-color: $white;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: left 400ms ease-in-out;
+
+        @include md {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include xxl {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .circle {
+          left: 25%;
+        }
+      }
+    }
+  }
+}
